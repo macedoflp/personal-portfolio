@@ -41,7 +41,7 @@ const projectsData = [
     id: 1,
     title: "MDK Studio Platform",
     description: "Complete web development platform with integrated design tools",
-    image: "../public/mdk-studio.png",
+    image: "../assets/mdk-studio.png",
     tech: ["React", "Node.js", "Tailwind CSS"],
     links: {
       demo: "https://mdkstudio.com.br/",
@@ -52,7 +52,7 @@ const projectsData = [
     id: 2,
     title: "Payroll System",
     description: "Optimized and automatic payroll platform",
-    image: "../public/folha.png",
+    image: "../assets/folha.png",
     tech: ["MUI", "React", "Nest.js", "PostgreSQL"],
     links: {
       demo: "not-found",
@@ -63,7 +63,7 @@ const projectsData = [
     id: 3,
     title: "Brazilian Jewelry Store",
     description: "Joias Lux is an institutional website that presents a collection of exclusive jewelry.",
-    image: "../public/loja-joias.png",
+    image: "../assets/loja-joias.png",
     tech: ["Html", "Css", "Javascript", "Sass"],
     links: {
       demo: "https://macedoflp.github.io/loja-de-joias/",
