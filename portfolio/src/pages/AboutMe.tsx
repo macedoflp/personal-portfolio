@@ -61,8 +61,8 @@ const GradientText = styled(Typography)({
 const handleDownload = () => {
     // Cria um link temporário
     const link = document.createElement('a');
-    link.href = '/doc/curriculum-Evanildo.pdf'; 
-    link.download = 'curriculum-Evanildo.pdf';
+    link.href = '/doc/Curriculum-Evanildo.pdf'; 
+    link.download = 'Curriculum-Evanildo.pdf';
 
 
     document.body.appendChild(link);
