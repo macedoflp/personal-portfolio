@@ -17,7 +17,6 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { Menu as MenuIcon, LinkedIn, GitHub, Email } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
 
 interface TemplateProps {
   children: React.ReactNode;
@@ -32,6 +31,19 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
     setMobileOpen(!mobileOpen);
   };
 
+  // Função para rolagem suave ao clicar em links com ID
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
@@ -41,27 +53,31 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
         height: '100%',
       }}
     >
-      <Typography variant="h6" sx={{ my: 2, color: '#ccd6f6' }}>
+      <a
+        href='#home'
+        onClick={handleSmoothScroll}
+        style={{ textDecoration: 'none', marginTop: 2, marginBottom: 2, color: '#ccd6f6', fontSize: '1.5rem' }}
+      >
         Portfolio
-      </Typography>
+      </a>
       <List>
         <ListItem disablePadding>
-          <ListItemButton sx={{ textAlign: 'center' }} component={Link} to="/">
+          <ListItemButton sx={{ textAlign: 'center' }} href='#home' onClick={handleSmoothScroll}>
             <ListItemText primary="Home" sx={{ color: '#ccd6f6' }} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton sx={{ textAlign: 'center' }} component={Link} to="/about-me">
+          <ListItemButton sx={{ textAlign: 'center' }} href='#about-me' onClick={handleSmoothScroll}>
             <ListItemText primary="About Me" sx={{ color: '#ccd6f6' }} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton sx={{ textAlign: 'center' }} component={Link} to="/projects">
+          <ListItemButton sx={{ textAlign: 'center' }} href='#projects' onClick={handleSmoothScroll}>
             <ListItemText primary="Projects" sx={{ color: '#ccd6f6' }} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton sx={{ textAlign: 'center' }} component={Link} to="/contact">
+          <ListItemButton sx={{ textAlign: 'center' }} href='#contact' onClick={handleSmoothScroll}>
             <ListItemText primary="Contact" sx={{ color: '#ccd6f6' }} />
           </ListItemButton>
         </ListItem>
@@ -89,9 +105,13 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
         }}
       >
         <Toolbar>
-          <Typography variant="h6" sx={{ ml: '2rem', color: '#ccd6f6', flexGrow: 1 }}>
+          <a
+            href="#home"
+            onClick={handleSmoothScroll}
+            style={{ textDecoration: 'none', marginLeft: '2rem', color: '#ccd6f6', flexGrow: 1, fontSize: '1.5rem' }}
+          >
             Portfolio
-          </Typography>
+          </a>
           {isMobile ? (
             <IconButton color="inherit" aria-label="open drawer" edge="end" onClick={handleDrawerToggle}>
               <MenuIcon />
@@ -107,8 +127,8 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
                   transition: 'all 0.3s ease',
                 }}
                 color="inherit"
-                component={Link}
-                to="/"
+                href='#home'
+                onClick={handleSmoothScroll}
               >
                 Home
               </Button>
@@ -121,8 +141,8 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
                   transition: 'all 0.3s ease',
                 }}
                 color="inherit"
-                component={Link}
-                to="/about-me"
+                href='#about-me'
+                onClick={handleSmoothScroll}
               >
                 About Me
               </Button>
@@ -134,9 +154,8 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
                   '&:hover': { color: '#00b4d8', background: 'rgba(0, 180, 216, 0.1)' },
                   transition: 'all 0.3s ease',
                 }}
-                color="inherit"
-                component={Link}
-                to="/projects"
+                href='#projects'
+                onClick={handleSmoothScroll}
               >
                 Projects
               </Button>
@@ -149,8 +168,8 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
                   transition: 'all 0.3s ease',
                 }}
                 color="inherit"
-                component={Link}
-                to="/contact"
+                href='#contact'
+                onClick={handleSmoothScroll}
               >
                 Contact
               </Button>

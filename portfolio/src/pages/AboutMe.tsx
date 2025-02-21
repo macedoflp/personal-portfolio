@@ -87,7 +87,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <AboutContainer>
+    <AboutContainer id="about-me">
       <Particles
         options={{
           particles: {
