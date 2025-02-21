@@ -61,10 +61,10 @@ const GradientText = styled(Typography)({
 const handleDownload = () => {
     // Cria um link temporário
     const link = document.createElement('a');
-    link.href = '../../public/doc/curriculum-Evanildo.pdf'; // Certifique-se de que o caminho esteja correto
+    link.href = '/doc/curriculum-Evanildo.pdf'; 
     link.download = 'curriculum-Evanildo.pdf';
 
-    // Adiciona o link ao documento e aciona o clique
+
     document.body.appendChild(link);
     link.click();
 
@@ -76,7 +76,7 @@ const AboutMe = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  // Lista de habilidades direto no componente
+
   const skills = [
     { icon: <Code sx={{ color: "#00b4d8" }} />, name: "Web Development" },
     { icon: <DesignServices sx={{ color: "#00b4d8" }} />, name: "UI/UX Design" },

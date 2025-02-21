@@ -4,7 +4,6 @@ import { GitHub, Visibility } from "@mui/icons-material";
 import { Particles } from "react-tsparticles";
 import { useTheme } from '@mui/material/styles';
 
-// Animação melhorada
 const fadeInUp = keyframes`
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -41,7 +40,7 @@ const projectsData = [
     id: 1,
     title: "MDK Studio Platform",
     description: "Complete web development platform with integrated design tools",
-    image: "../../public/img/mdk-studio.png",
+    image: "/img/mdk-studio.png",
     tech: ["React", "Node.js", "Tailwind CSS"],
     links: {
       demo: "https://mdkstudio.com.br/",
@@ -52,7 +51,7 @@ const projectsData = [
     id: 2,
     title: "Payroll System",
     description: "Optimized and automatic payroll platform",
-    image: "../../public/img/folha.png",
+    image: "/img/folha.png",
     tech: ["MUI", "React", "Nest.js", "PostgreSQL"],
     links: {
       demo: "not-found",
@@ -63,7 +62,7 @@ const projectsData = [
     id: 3,
     title: "Brazilian Jewelry Store",
     description: "Joias Lux is an institutional website that presents a collection of exclusive jewelry.",
-    image: "../../public/img/loja-joias.png",
+    image: "/img/loja-joias.png",
     tech: ["Html", "Css", "Javascript", "Sass"],
     links: {
       demo: "https://macedoflp.github.io/loja-de-joias/",
