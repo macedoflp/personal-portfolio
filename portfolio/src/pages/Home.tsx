@@ -4,8 +4,6 @@ import { ArrowDownward, LinkedIn, GitHub, Description } from "@mui/icons-materia
 import { Particles } from "react-tsparticles";
 import { useTheme } from "@mui/material/styles";
 
-const theme = useTheme();
-
 const fadeInUp = keyframes`
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -47,7 +45,7 @@ const ScrollIndicator = styled(Box)({
 });
 
 const Home = () => {
-  
+  const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (

@@ -2,7 +2,6 @@ import { Container, Typography, Box, Avatar, Grid, Button, IconButton, useTheme,
 import { styled, keyframes } from "@mui/system";
 import { LinkedIn, GitHub, Description, Code, DesignServices, Palette, DataObject } from "@mui/icons-material";
 import { Particles } from "react-tsparticles";
-const theme = useTheme();
 
 const fadeInUp = keyframes`
   0% { opacity: 0; transform: translateY(30px); }
@@ -74,6 +73,7 @@ const handleDownload = () => {
   };
 
 const AboutMe = () => {
+  const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   // Lista de habilidades direto no componente

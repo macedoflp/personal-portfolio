@@ -4,7 +4,6 @@ import { GitHub, Visibility } from "@mui/icons-material";
 import { Particles } from "react-tsparticles";
 import { useTheme } from '@mui/material/styles';
 
-const theme = useTheme();
 // Animação melhorada
 const fadeInUp = keyframes`
   0% { opacity: 0; transform: translateY(30px); }
@@ -74,6 +73,7 @@ const projectsData = [
 ];
 
 const Projects = () => {
+  const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
