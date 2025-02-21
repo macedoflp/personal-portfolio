@@ -1,7 +1,8 @@
 // Template.tsx
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, Button, Container, Grid, IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { LinkedIn, GitHub, Email } from '@mui/icons-material';
 
 interface TemplateProps {
   children: React.ReactNode;
@@ -14,51 +15,67 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        width: '100vw',
+        width: '99vw',
         overflowX: 'hidden',
       }}
     >
-      {/* Navbar fixa com largura total da viewport */}
-      <AppBar position="fixed" sx={{ width: '100vw' }}>
+
+      <AppBar position="fixed" sx={{ width: '100vw',   background: 'linear-gradient(45deg, rgba(10, 25, 47, 0.95) 30%, rgba(23, 42, 69, 0.95) 90%)', backdropFilter: 'blur(10px)', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)', }}>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Meu Projeto
+          <Typography variant="h6" sx={{ml: '2rem',color: '#ccd6f6', flexGrow: 1 }}>
+            My Portfolio
           </Typography>
-          <Button color="inherit" component={Link} to="/">
+          <Button sx={{  color: '#ccd6f6', textTransform: 'none', fontSize: '1rem', '&:hover': {color: '#00b4d8',background: 'rgba(0, 180, 216, 0.1)',},transition: 'all 0.3s ease',}} color="inherit" component={Link} to="/">
             Home
           </Button>
-          <Button color="inherit" component={Link} to="/about-me">
-            Sobre Mim
+          <Button sx={{  color: '#ccd6f6', textTransform: 'none', fontSize: '1rem', '&:hover': {color: '#00b4d8',background: 'rgba(0, 180, 216, 0.1)',},transition: 'all 0.3s ease',}} color="inherit" component={Link} to="/about-me">
+            About Me
           </Button>
-          <Button color="inherit" component={Link} to="/projects">
-            Projetos
+          <Button sx={{  color: '#ccd6f6', textTransform: 'none', fontSize: '1rem', '&:hover': {color: '#00b4d8',background: 'rgba(0, 180, 216, 0.1)',},transition: 'all 0.3s ease',}} color="inherit" component={Link} to="/projects">
+            Projects
           </Button>
-          <Button color="inherit" component={Link} to="/contact">
-            Contato
+          <Button sx={{  color: '#ccd6f6', textTransform: 'none', fontSize: '1rem', '&:hover': {color: '#00b4d8',background: 'rgba(0, 180, 216, 0.1)',},transition: 'all 0.3s ease',}} color="inherit" component={Link} to="/contact">
+            Contact
           </Button>
         </Toolbar>
       </AppBar>
 
-      {/* Espaçador para compensar a navbar fixa */}
+
       <Toolbar />
 
-      {/* Conteúdo principal */}
+
       <Box sx={{ flexGrow: 1, width: '100%' }}>{children}</Box>
 
-      {/* Footer com largura total da viewport */}
-      <Box
-        component="footer"
-        sx={{
-          width: '100vw',
-          py: 2,
-          backgroundColor: (theme) => theme.palette.primary.main,
-          color: '#fff',
-          textAlign: 'center',
-        }}
-      >
-        <Typography variant="body2">
-          © {new Date().getFullYear()} Meu Projeto. Todos os direitos reservados.
-        </Typography>
+
+      <Box sx={{ background: 'linear-gradient(45deg, #0a192f, #172a45)', borderTop: '1px solid rgba(255, 255, 255, 0.1)',}} component="footer">
+        <Container maxWidth="lg" sx={{ py: 4 }}>
+          <Grid container spacing={4} justifyContent="space-between" alignItems="center">
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" sx={{ color: '#00b4d8', mb: 2 }}>
+                Let's Connect
+              </Typography>
+              <Box sx={{ display: 'flex', gap: 2 }}>
+                <IconButton href="https://www.linkedin.com/in/macedoflp" target="_blank" sx={{ color: '#90e0ef' }}>
+                  <LinkedIn fontSize="large" />
+                </IconButton>
+                <IconButton href="https://github.com/macedoflp" target="_blank" sx={{ color: '#90e0ef' }}>
+                  <GitHub fontSize="large" />
+                </IconButton>
+                <IconButton href="mailto:macedooflp@gmail.com" sx={{ color: '#90e0ef' }}>
+                  <Email fontSize="large" />
+                </IconButton>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'left', md: 'right' } }}>
+              <Typography variant="body2" sx={{ color: '#8892b0' }}>
+                © {new Date().getFullYear()} Felipe Macêdo
+              </Typography>
+              <Typography variant="body2" sx={{ color: '#8892b0' }}>
+                Built with React & Material-UI
+              </Typography>
+            </Grid>
+          </Grid>
+        </Container>
       </Box>
     </Box>
   );
