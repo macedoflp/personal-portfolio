@@ -4,6 +4,7 @@ import { Send, Email, Phone, LinkedIn, GitHub } from "@mui/icons-material";
 import { Particles } from "react-tsparticles";
 import { useTheme } from '@mui/material/styles';
 
+const theme = useTheme();
 const fadeInUp = keyframes`
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -37,7 +38,6 @@ const GradientText = styled(Typography)({
 });
 
 const Contact = () => {
-  const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
