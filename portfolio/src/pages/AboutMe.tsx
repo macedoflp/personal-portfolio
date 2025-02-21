@@ -107,7 +107,7 @@ const AboutMe = () => {
             <Grid item xs={12} md={4} textAlign="center">
               <AnimatedAvatar
                 src="https://avatars.githubusercontent.com/u/141750211?v=4"
-                alt="Felipe Macêdo"
+                alt="Evanildo Macêdo"
               />
               <Box mt={3}>
                 <IconButton href="https://www.linkedin.com/in/macedoflp" target="_blank">
@@ -151,7 +151,7 @@ const AboutMe = () => {
                   mb: 3,
                 }}
               >
-                Hi, I'm <strong style={{ color: "#00b4d8" }}>Felipe Macêdo</strong>, a passionate Software Developer and UI/UX Designer dedicated to creating engaging digital experiences. I founded MDK Studio to help businesses transform their online presence through innovative design and robust web development.
+                Hi, I'm <strong style={{ color: "#00b4d8" }}>Evanildo Macêdo</strong>, a passionate Software Developer and UI/UX Designer dedicated to creating engaging digital experiences. I founded MDK Studio to help businesses transform their online presence through innovative design and robust web development.
               </Typography>
 
               <Typography

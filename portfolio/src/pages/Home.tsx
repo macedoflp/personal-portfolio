@@ -87,7 +87,7 @@ const Home = () => {
               animationDelay: "0.2s",
             }}
           >
-            Felipe Macêdo
+            Evanildo Macêdo
           </GradientText>
 
           <Typography

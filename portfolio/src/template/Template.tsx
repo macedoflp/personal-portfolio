@@ -68,7 +68,7 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
             </Grid>
             <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'left', md: 'right' } }}>
               <Typography variant="body2" sx={{ color: '#8892b0' }}>
-                © {new Date().getFullYear()} Felipe Macêdo
+                © {new Date().getFullYear()} Evanildo Macêdo
               </Typography>
               <Typography variant="body2" sx={{ color: '#8892b0' }}>
                 Built with React & Material-UI
