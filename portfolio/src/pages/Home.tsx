@@ -17,7 +17,7 @@ const gradientAnimation = keyframes`
   100% { background-position: 0% 50%; }
 `;
 
-const HeroSection = styled(Box)(({ theme }) => ({
+const HeroSection = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -30,7 +30,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   color: "#fff",
   position: "relative",
   overflow: "hidden",
-}));
+});
 
 const GradientText = styled(Typography)({
   background: "linear-gradient(45deg, #00b4d8, #90e0ef)",

@@ -1,6 +1,6 @@
 import { Container, Typography, Box, Grid, Card, CardContent, CardActions, Button, IconButton, useMediaQuery } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
-import { GitHub, Visibility, Launch } from "@mui/icons-material";
+import { GitHub, Visibility } from "@mui/icons-material";
 import { Particles } from "react-tsparticles";
 import { useTheme } from '@mui/material/styles';
 
@@ -19,7 +19,7 @@ const ProjectsContainer = styled(Box)(({ theme }) => ({
   overflow: "hidden",
 }));
 
-const ProjectCard = styled(Card)(({ theme }) => ({
+const ProjectCard = styled(Card)({
   background: "rgba(255, 255, 255, 0.05)",
   backdropFilter: "blur(12px)",
   borderRadius: "16px",
@@ -29,7 +29,7 @@ const ProjectCard = styled(Card)(({ theme }) => ({
     transform: "translateY(-8px)",
     boxShadow: "0 12px 30px rgba(0, 179, 216, 0.3)",
   },
-}));
+});
 
 const GradientText = styled(Typography)({
   background: "linear-gradient(45deg, #00b4d8, #90e0ef)",

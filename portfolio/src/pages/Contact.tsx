@@ -10,7 +10,7 @@ const fadeInUp = keyframes`
   100% { opacity: 1; transform: translateY(0); }
 `;
 
-const ContactContainer = styled(Box)(({ theme }) => ({
+const ContactContainer = styled(Box)({
   minHeight: "100vh",
   position: "relative",
   background: "linear-gradient(45deg, #0a192f, #172a45)",
@@ -18,7 +18,7 @@ const ContactContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   overflow: "hidden",
-}));
+});
 
 const FormBox = styled(Box)(({ theme }) => ({
   maxWidth: "1200px",

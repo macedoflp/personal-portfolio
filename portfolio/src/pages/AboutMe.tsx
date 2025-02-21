@@ -9,7 +9,7 @@ const fadeInUp = keyframes`
   100% { opacity: 1; transform: translateY(0); }
 `;
 
-const AboutContainer = styled(Box)(({ theme }) => ({
+const AboutContainer = styled(Box)({
   minHeight: "100vh",
   position: "relative",
   background: "linear-gradient(45deg, #0a192f, #172a45)",
@@ -17,7 +17,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   overflow: "hidden",
-}));
+});
 
 const ContentBox = styled(Box)(({ theme }) => ({
   maxWidth: "1200px",
@@ -41,7 +41,7 @@ const AnimatedAvatar = styled(Avatar)(({ theme }) => ({
   },
 }));
 
-const SkillBadge = styled(Box)(({ theme }) => ({
+const SkillBadge = styled(Box)({
   display: "flex",
   alignItems: "center",
   borderRadius: "8px",
@@ -51,7 +51,7 @@ const SkillBadge = styled(Box)(({ theme }) => ({
     transform: "translateY(-3px)",
     background: "rgba(255, 255, 255, 0.2)",
   },
-}));
+});
 
 const GradientText = styled(Typography)({
   background: "linear-gradient(45deg, #00b4d8, #90e0ef)",
