@@ -122,7 +122,7 @@ const Home = () => {
             <Button
               variant="contained"
               startIcon={<Description />}
-              href="projects"
+              href="#projects"
               sx={{
                 background: "linear-gradient(45deg, #00b4d8, #90e0ef)",
                 color: "#0a192f",
@@ -143,7 +143,7 @@ const Home = () => {
 
             <Button
               variant="outlined"
-              href="contact"
+              href="#contact"
               sx={{
                 color: "#00b4d8",
                 borderColor: "#00b4d8",
