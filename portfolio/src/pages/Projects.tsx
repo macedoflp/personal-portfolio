@@ -60,13 +60,13 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Brazilian Jewelry Store",
-    description: "Joias Lux is an institutional website that presents a collection of exclusive jewelry.",
-    image: "/img/loja-joias.png",
-    tech: ["Html", "Css", "Javascript", "Sass"],
+    title: "Love Timelines",
+    description: "LoveTimelines is a platform that helps couples capture, organize, and relive their most meaningful relationship moments.",
+    image: "/img/lovetimelines.png",
+    tech: ["React", "Java", "SpringBoot", "Sass"],
     links: {
-      demo: "https://macedoflp.github.io/loja-de-joias/",
-      code: "https://github.com/macedoflp/loja-de-joias"
+      demo: "https://www.lovetimelines.com/",
+      code: "not-found"
     }
   },
 ];
